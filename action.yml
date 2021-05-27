@@ -1,0 +1,24 @@
+name: 'CloudFront invalidation batch'
+description: 'Prepare CloudFront invalidation batch, from S3 sync output'
+branding:
+  icon: box
+  color: blue
+inputs:
+  sync-output:
+    description: 'Output from AWS S3 sync'
+    required: true
+  s3-bucket:
+    description: 'S3 bucket'
+    required: true
+  prefix:
+    description: 'Prefix path'
+    required: false
+    default: ''
+outputs:
+  json:
+    description: 'CloudFront invalidation batch, in JSON'
+  quantity:
+    description: 'Quantity of paths to invalidate'
+runs:
+  using: 'node12'
+  main: 'main.js'
