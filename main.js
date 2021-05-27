@@ -33,8 +33,6 @@ const invalidationBatch = {
 const json = JSON.stringify(invalidationBatch);
 const escaped = JSON.stringify(json);
 
-
-
 core.setOutput('quantity', files.length);
 core.setOutput('json', json);
 core.setOutput('json_escaped', escaped);

@@ -1,4 +1,4 @@
-name: 'CloudFront invalidation batch'
+name: 'Prepare CloudFront invalidation batch'
 description: 'Prepare CloudFront invalidation batch, from S3 sync output'
 branding:
   icon: box
@@ -11,14 +11,14 @@ inputs:
     description: 'S3 bucket'
     required: true
   prefix:
-    description: 'Prefix path'
+    description: 'Prefix for invalidation paths'
     required: false
     default: ''
 outputs:
   json:
     description: 'CloudFront invalidation batch, in JSON'
   json_escaped:
-    description: 'CloudFront invalidation batch, in JSON... but escaped to be used in '
+    description: 'CloudFront invalidation batch, in JSON, but escaped to be used as arguments in CLI commands'
   quantity:
     description: 'Quantity of paths to invalidate'
 runs:
