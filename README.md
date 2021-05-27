@@ -29,7 +29,7 @@ This action is designed that takes in output from AWS S3 sync command inorder to
 
 ## Usage
 
-Run a S3 sync, which we can get the output from
+Run a S3 sync, with [AWS S3 sync action](https://github.com/marketplace/actions/aws-s3-sync-w-output), which we can get the output from
 
 ```yaml
       - name: Sync to S3
