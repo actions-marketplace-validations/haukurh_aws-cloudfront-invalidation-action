@@ -34,4 +34,4 @@ const json = JSON.stringify(invalidationBatch);
 
 core.setOutput('quantity', files.length);
 core.setOutput('json', json);
-core.setOutput('json_escaped', json.replaceAll('"', '\"'));
+core.setOutput('json_escaped', json.replace('"', '\"'));
