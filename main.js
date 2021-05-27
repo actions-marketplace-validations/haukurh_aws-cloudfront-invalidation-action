@@ -30,5 +30,8 @@ const invalidationBatch = {
     "CallerReference": `github-action-${githubRunId}-${githubRunNumber}`,
 };
 
+const json = JSON.stringify(invalidationBatch);
+
 core.setOutput('quantity', files.length);
-core.setOutput('json', JSON.stringify(invalidationBatch));
+core.setOutput('json', json);
+core.setOutput('json_escaped', json.replaceAll('"', '\"'));

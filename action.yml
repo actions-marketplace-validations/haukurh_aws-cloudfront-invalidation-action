@@ -17,6 +17,8 @@ inputs:
 outputs:
   json:
     description: 'CloudFront invalidation batch, in JSON'
+  json_escaped:
+    description: 'CloudFront invalidation batch, in JSON... but escaped to be used in '
   quantity:
     description: 'Quantity of paths to invalidate'
 runs:
